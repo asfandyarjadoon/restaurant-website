@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dastarkhwan | Traditional Pakistani Kitchen</title>
+  <meta name="description" content="Karahi, nihari, biryani and charcoal kebabs. Order online or book a table at Dastarkhwan.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Rozha+One&family=Outfit:wght@400;500;600&family=Noto+Nastaliq+Urdu:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a href="#home" class="logo"><span class="ur" lang="ur" dir="rtl">دسترخوان</span> Dastarkhwan</a>
+    <nav>
+      <a href="#menu">Menu</a>
+      <a href="#visit">Visit</a>
+    </nav>
+    <button id="cart-btn" class="cart-btn" aria-label="Open your order">Your order <span id="cart-count">0</span></button>
+  </header>
+
+  <section id="home" class="hero">
+    <div class="hero-text">
+      <h1>Real Pakistani food, cooked slow and served generously.</h1>
+      <p>Charcoal kebabs, wok karahis, overnight nihari and dum biryani. Order for pickup or delivery, or reserve a table for the family.</p>
+      <div class="hero-actions">
+        <a href="#menu" class="btn">Order now</a>
+      </div>
+    </div>
+    <div class="arch" aria-hidden="true">
+      <span class="ur" lang="ur" dir="rtl">دسترخوان</span>
+      <small>Traditional Pakistani kitchen</small>
+    </div>
+  </section>
+  <div class="stripe"></div>
+
+  <section class="facts">
+    <div><strong>100% Halal</strong><span>Fresh meat, delivered daily</span></div>
+    <div><strong>Cooked to order</strong><span>Tandoor and karahi, never reheated</span></div>
+    <div><strong>Delivery in 45 minutes</strong><span>Or call us and we'll fix it</span></div>
+  </section>
+
+  <section id="menu" class="section">
+    <h2>Our menu</h2>
+    <div class="tools">
+      <input id="search" type="search" placeholder="Search karahi, biryani, chai..." aria-label="Search dishes">
+      <div id="filters" class="filters"></div>
+    </div>
+    <div id="menu-grid" class="grid"></div>
+  </section>
+
+  <section id="visit" class="section">
+    <h2>Visit us</h2>
+    <div class="info">
+      <div><h3>Opening hours</h3><p>Monday to Thursday: 12:00 pm to 11:00 pm<br>Friday to Sunday: 12:00 pm to 12:30 am</p></div>
+      <div><h3>Contact</h3><p>0371 XXXXX01<br>memberpac99@gmail.com</p></div>
+      <div><h3>Address</h3><p>Chowk yadgar, Qissa khwani bazar<br>Peshawar, Pakistan</p></div>
+    </div>
+  </section>
+
+  <div class="stripe"></div>
+  <footer><span class="ur" lang="ur" dir="rtl">دسترخوان</span> &copy; 2026 Dastarkhwan. All rights reserved.</footer>
+
+  <div id="overlay" class="overlay" hidden></div>
+  <aside id="drawer" class="drawer" aria-label="Your order" aria-hidden="true">
+    <div class="drawer-head"><h2>Your order</h2><button id="close-cart" aria-label="Close">&times;</button></div>
+    <ul id="cart-items" class="cart-items"></ul>
+    <div id="totals" class="totals"></div>
+    <form id="order-form" novalidate>
+      <label>Full name <input name="name" autocomplete="name" required></label>
+      <label>Mobile number <input name="phone" inputmode="tel" placeholder="0300 1234567" required></label>
+      <label>Order type
+        <select name="type" id="order-type"><option value="pickup">Pickup</option><option value="delivery">Delivery</option></select>
+      </label>
+      <label id="addr-wrap" hidden>Delivery address <input name="address"></label>
+      <p id="order-msg" class="msg" role="status"></p>
+      <button class="btn full" type="submit">Place order</button>
+      <button class="btn wa full" type="button" id="wa-btn">Send order on WhatsApp</button>
+    </form>
+  </aside>
+
+  <script src="script.js"></script>
+</body>
+</html>
